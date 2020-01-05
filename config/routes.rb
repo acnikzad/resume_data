@@ -7,16 +7,14 @@ Rails.application.routes.draw do
 
     #student
     get "/students" => "students#index"
+    post "/students" => "students#create"
     get "/students/:id" => "students#show"
-
-
+    patch "/students/:id" => "students#update"
 
     #expererience 
     get "/experience" => "experiences#index"
     get "/experience/:id" => "experiences#show"
     post "/experience" => "experiences#create"
     # patch "/experience" => "experiences #update"
-
-
   end
 end
