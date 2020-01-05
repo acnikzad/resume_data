@@ -1,0 +1,11 @@
+@experience.map do |experience|
+  {
+  start_date: experience.start_date,
+  end_date: experience.end_date,
+  job_title: experience.job_title,
+  company: experience.company,
+  details: experience.details
+
+  }
+end
+
