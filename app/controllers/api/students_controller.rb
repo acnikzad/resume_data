@@ -1,7 +1,7 @@
 class Api::StudentsController < ApplicationController
   def index
     @students = Student.all
-    render 'student.json.jb'
+    render 'index.json.jb'
   end
   def show
     student_id = params[:id]
