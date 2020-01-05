@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
     #student
     get "/students" => "students#index"
+    post "/students" => "students#create"
     get "/students/:id" => "students#show"
-
-
+    patch "/students/:id" => "students#update"
 
     #expererience 
     get "/experience" => "work_experiences#index"
