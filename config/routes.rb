@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     #education
     get "/education" => "education#index"
     post "/education" => "education#create"
+    get "/education/:id" => "education#show"
+    patch "/education/:id" => "education#update"
   end
 end
