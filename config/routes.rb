@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
     # capstone
     get "/capstones" => "capstone#index"
+    post "/capstones" => "capstone#create"
 
   end
 end
