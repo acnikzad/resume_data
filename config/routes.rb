@@ -12,9 +12,11 @@ Rails.application.routes.draw do
     patch "/students/:id" => "students#update"
 
     #expererience 
-    get "/experience" => "experiences#index"
-    get "/experience/:id" => "experiences#show"
-    post "/experience" => "experiences#create"
-    # patch "/experience" => "experiences #update"
+    get "/experience" => "work_experiences#index"
+    get "/experience/:id" => "work_experiences#show"
+    post "/experience" => "work_experiences#create"
+    patch "/experience" => "work_experiences #update"
+
+
   end
 end
