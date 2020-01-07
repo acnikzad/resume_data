@@ -18,13 +18,20 @@ Rails.application.routes.draw do
     get "/education/:id" => "education#show"
     patch "/education/:id" => "education#update"
     delete "/education/:id" => "education#destroy"
-    #experience 
 
+    #experience 
     get "/experiences" => "experience#index"
     get "/experiences/:id" => "experience#show"
     post "/experiences" => "experience#create"
     patch "/experiences/:id" => "experience#update"
-    delete "/experiences" => "experience#destroy"
+    delete "/experiences/:id" => "experience#destroy"
+
+    #skills 
+    get "/skills" => "skills#index"
+    get "/skills/:id" => "skills#show"
+    post "/skills" => "skills#create"
+    patch "/skills/:id" => "skills#update"
+    delete "/skills/:id" => "skills#destroy"
 
     # capstone
     get "/capstones" => "capstone#index"
