@@ -17,5 +17,8 @@ Rails.application.routes.draw do
     get "/experience/:id" => "experiences#show"
     post "/experience" => "experiences#create"
     # patch "/experience" => "experiences #update"
+
+    #education
+    get "/education" => "education#index"
   end
 end
