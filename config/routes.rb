@@ -20,5 +20,6 @@ Rails.application.routes.draw do
 
     #education
     get "/education" => "education#index"
+    post "/education" => "education#create"
   end
 end
