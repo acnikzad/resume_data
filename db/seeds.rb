@@ -15,3 +15,7 @@
   # education = Education.create!(start_date: "07/06/17", end_date: "08/10/19", degree: "Bachelors", university: "Univerity university", details: "Earned degree")
   # education = Education.create!(start_date: "04/06/15", end_date: "12/10/17", degree: "Bachelors", university: "Arizona state", details: "Earned degree")
   # education = Education.create!(start_date: "02/13/19", end_date: "07/20/20", degree: "Bachelors", university: "University of Hawai'i", details: "Did stuff")
+
+  # capstone = Capstone.create!(name: "the capstone", description: "capstone stuff", url: "capstone.com", screenshot: "thecapstoneee.com")
+  # capstone = Capstone.create!(name: "idk", description: "stuff", url: "capstone.com", screenshot: "thecapstoneee.com")
+

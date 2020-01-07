@@ -26,5 +26,8 @@ Rails.application.routes.draw do
     patch "/experiences/:id" => "experience#update"
     delete "/experiences" => "experience#destroy"
 
+    # capstone
+    get "/capstones" => "capstone#index"
+
   end
 end
