@@ -23,9 +23,14 @@ class Api::EducationController < ApplicationController
     @education.start_date = params[:start_date] || @education.start_date
     @education.end_date = params[:end_date] || @education.end_date
     @education.degree = params[:degree] || @education.degree
-    @education.univeristy = params[:university] || @education.university
+    @education.university = params[:university] || @education.university
     @education.details = params[:details] || @education.details
     @education.save
     render 'show.json.jb'
+  end
+  def destroy
+    @education = Education.find_by(id: params[:id])
+    @education.destroy
+    render json: {message: "Education destroyed"}
   end
 end
