@@ -9,7 +9,8 @@ class Api::EducationController < ApplicationController
       end_date: params[:end_date],
       degree: params[:degree],
       university: params[:university],
-      details: params[:details]
+      details: params[:details],
+      student_id: params[:student_id]
     )
     @education.save
     render 'show.json.jb'
@@ -25,6 +26,7 @@ class Api::EducationController < ApplicationController
     @education.degree = params[:degree] || @education.degree
     @education.university = params[:university] || @education.university
     @education.details = params[:details] || @education.details
+    @education.student_id = params[:student_id] || @education.student_id
     @education.save
     render 'show.json.jb'
   end
