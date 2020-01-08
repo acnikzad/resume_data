@@ -20,7 +20,9 @@ class Api::StudentsController < ApplicationController
       website: params[:website],
       resume: params[:resume],
       github: params[:github],
-      photo: params[:photo]
+      photo: params[:photo],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
     )
     @student.save
     render 'show.json.jb'
@@ -39,8 +41,17 @@ class Api::StudentsController < ApplicationController
     @student.resume = params[:resume] || @student.resume
     @student.github = params[:github] || @student.github
     @student.photo = params[:photo] || @student.photo
-    @student.save
-    render 'show.json.jb'
+    @student.password = params[:password] || @student.password
+    @student.password_confirmation = params[:password_confirmation] || @student.password_confirmation,
+
+    if user.save
+      render json: { message: "Student created successfully" }, status: :created
+    else
+      render json: { errors: student.errors.full_messages }, status: :bad_request
+    end
+    
+    # @student.save
+    # render 'show.json.jb'
   end
   def destroy
     @student = Student.find_by(id: params[:id])
