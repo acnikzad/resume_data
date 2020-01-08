@@ -41,8 +41,8 @@ class Api::StudentsController < ApplicationController
     @student.resume = params[:resume] || @student.resume
     @student.github = params[:github] || @student.github
     @student.photo = params[:photo] || @student.photo
-    @student.password = params[:password] || @student.password
-    @student.password_confirmation = params[:password_confirmation] || @student.password_confirmation,
+    # @student.password = params[:password] || @student.password
+    # @student.password_confirmation = params[:password_confirmation] || @student.password_confirmation
 
     if user.save
       render json: { message: "Student created successfully" }, status: :created
