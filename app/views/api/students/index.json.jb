@@ -12,7 +12,6 @@
     resume: student.resume,
     github: student.github,
     photo: student.photo,
-    password: student.password,
-    password_confirmation: student.password_confirmation
+    password: student.password
   }
 end
